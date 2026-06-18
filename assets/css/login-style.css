@@ -1,0 +1,182 @@
+/* 
+ * Sugar Story Premium Login Styles
+ */
+
+/* Container Setup */
+.sugar-story-auth-wrapper {
+    max-width: 500px;
+    margin: 40px auto;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Form Box with Glassmorphism / Clean Card Look */
+.sugar-story-auth-box {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 1px 8px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+/* Headings & Text */
+.sugar-story-auth-box h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.sugar-story-auth-box .auth-subtitle {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Input Groups */
+.sugar-input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.sugar-input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.sugar-input-group label .required {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+/* Inputs */
+input.sugar-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #fcfcfc;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+input.sugar-input:focus {
+    outline: none;
+    border-color: #d84b72; /* Sugar Story branded pink/red */
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(216, 75, 114, 0.15);
+}
+
+/* Actions Row (Remember Me & Lost Password) */
+.sugar-auth-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.sugar-auth-actions label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #555;
+    font-weight: 500;
+    margin: 0;
+}
+
+.sugar-auth-actions input[type="checkbox"] {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    accent-color: #d84b72;
+}
+
+.sugar-auth-actions a {
+    color: #d84b72;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.sugar-auth-actions a:hover {
+    color: #b53859;
+    text-decoration: underline;
+}
+
+/* Buttons */
+.sugar-submit-group button.sugar-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #d84b72 0%, #b53859 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sugar-submit-group button.sugar-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(216, 75, 114, 0.3);
+    background: linear-gradient(135deg, #e35a81 0%, #c44265 100%);
+}
+
+.sugar-submit-group button.sugar-btn:active {
+    transform: translateY(0);
+}
+
+/* Toggle Register/Login Link */
+.sugar-auth-toggle {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 15px;
+    color: #666;
+}
+
+.sugar-auth-toggle a {
+    color: #d84b72;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.sugar-auth-toggle a:hover {
+    color: #b53859;
+    text-decoration: underline;
+}
+
+/* Notices */
+.sugar-notice {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* WooCommerce Standard Element Overrides inside our form */
+.sugar-story-auth-box .woocommerce-form-row {
+    margin-bottom: 0;
+}
+
+.sugar-story-auth-box form {
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .sugar-story-auth-box {
+        padding: 30px 20px;
+        margin: 20px 15px;
+    }
+}

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sugar Story - Premium Login</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&amp;family=Plus+Jakarta+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#FEFBF6",
+                        "surface": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#FEFBF6",
+                        "primary": "#c3a669",
+                        "primary-container": "#c3a669",
+                        "on-primary-container": "#ffffff",
+                        "secondary": "#3a506b",
+                        "secondary-container": "#e0e7ff",
+                        "on-secondary-container": "#1e3a8a",
+                        "on-surface": "#2c3e50",
+                        "on-surface-variant": "#4a5568",
+                        "outline-variant": "#e2e8f0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Playfair Display", "serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "body-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+                        "label-md": ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .cocoa-shadow {
+            box-shadow: 0px 10px 30px rgba(74, 63, 63, 0.05);
+        }
+        .gold-border {
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .gold-border:focus-within {
+            border-color: #D4AF37;
+        }
+        
+        /* Floating animations for premium imagery */
+        @keyframes float-slow {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        @keyframes float-slower {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(15px) rotate(-2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .animate-float-slow { animation: float-slow 7s ease-in-out infinite; }
+        .animate-float-slower { animation: float-slower 9s ease-in-out infinite; }
+        
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md text-body-md min-h-screen flex flex-col overflow-x-hidden">
+<!-- TopAppBar Removed -->
+<!-- Main Content Area -->
+<main class="flex-grow flex items-center justify-center px-4 py-12 relative overflow-hidden">
+<!-- Decorative Scattered Premium Images -->
+<div class="hidden md:block absolute top-12 left-[10%] w-36 h-36 animate-float-slow z-50 group cursor-pointer">
+    <div class="w-full h-full rounded-[50%] border-4 border-white shadow-xl overflow-hidden transition-all duration-1000 ease-in-out group-hover:rounded-[15%] group-hover:shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&q=80" alt="Cake Slice" class="w-full h-full object-cover transition-transform duration-1000 ease-in-out group-hover:scale-125">
+    </div>
+</div>
+<div class="hidden lg:block absolute bottom-24 left-[15%] w-44 h-44 animate-float-slower z-50 group cursor-pointer" style="animation-delay: 2s;">
+    <div class="w-full h-full rounded-[50%] border-4 border-white shadow-xl overflow-hidden transition-all duration-1000 ease-in-out group-hover:rounded-[15%] group-hover:shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=400&q=80" alt="Macarons" class="w-full h-full object-cover transition-transform duration-1000 ease-in-out group-hover:scale-125">
+    </div>
+</div>
+<div class="hidden lg:block absolute top-20 right-[15%] w-40 h-40 animate-float-slower z-50 group cursor-pointer" style="animation-delay: 1s;">
+    <div class="w-full h-full rounded-[50%] border-4 border-white shadow-xl overflow-hidden transition-all duration-1000 ease-in-out group-hover:rounded-[15%] group-hover:shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&q=80" alt="Cookies" class="w-full h-full object-cover transition-transform duration-1000 ease-in-out group-hover:scale-125">
+    </div>
+</div>
+<div class="hidden md:block absolute bottom-12 right-[10%] w-32 h-32 animate-float-slow z-50 group cursor-pointer" style="animation-delay: 3s;">
+    <div class="w-full h-full rounded-[50%] border-4 border-white shadow-xl overflow-hidden transition-all duration-1000 ease-in-out group-hover:rounded-[15%] group-hover:shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?w=400&q=80" alt="Cupcake" class="w-full h-full object-cover transition-transform duration-1000 ease-in-out group-hover:scale-125">
+    </div>
+</div>
+
+<!-- Decorative Elements -->
+<div class="absolute -top-20 -left-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl z-0"></div>
+<div class="absolute -bottom-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl z-0"></div>
+<!-- Login/Register Card Container -->
+<section class="w-full max-w-[420px] bg-surface-container-lowest cocoa-shadow rounded-xl p-8 sm:p-10 relative z-10 border border-outline-variant/30 backdrop-blur-sm bg-white/95 overflow-hidden transition-all duration-500">
+<div id="loginView" class="transition-opacity duration-300">
+<div class="text-center mb-10">
+<h1 class="font-display-lg text-4xl text-primary italic mb-2">Sugar Story</h1>
+<p class="text-on-surface-variant font-label-md text-label-md tracking-widest uppercase">Welcome Back</p>
+</div>
+<form class="space-y-6" id="loginForm">
+<!-- Username/Email Field -->
+<div class="space-y-2">
+<label class="block font-label-md text-label-md text-on-surface-variant ml-1" for="email">Email or Username</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant/60 group-focus-within:text-primary transition-colors">person</span>
+<input class="w-full pl-12 pr-4 py-3.5 bg-surface-container-low border-none rounded-lg ring-1 ring-on-surface-variant/30 focus:ring-2 focus:ring-primary outline-none transition-all placeholder:text-on-surface-variant/50" id="email" name="email" placeholder="Enter your credentials" type="text"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-2">
+<div class="flex justify-between items-center px-1">
+<label class="block font-label-md text-label-md text-on-surface-variant" for="password">Password</label>
+<a class="text-secondary font-label-md text-label-md hover:underline" href="#">Lost password?</a>
+</div>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant/60 group-focus-within:text-primary transition-colors">lock</span>
+<input class="w-full pl-12 pr-12 py-3.5 bg-surface-container-low border-none rounded-lg ring-1 ring-on-surface-variant/30 focus:ring-2 focus:ring-primary outline-none transition-all placeholder:text-on-surface-variant/50" id="password" name="password" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant/60 hover:text-primary transition-colors" onclick="togglePassword()" type="button">
+<span class="material-symbols-outlined" id="eyeIcon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Remember Me -->
+<div class="flex items-center gap-3 px-1">
+<input class="w-5 h-5 rounded border-on-surface-variant/30 text-primary focus:ring-primary bg-surface-container-low transition-colors" id="remember" name="remember" type="checkbox"/>
+<label class="font-body-md text-on-surface-variant cursor-pointer select-none" for="remember">Remember me</label>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-primary-container text-on-primary-container font-label-md text-label-md py-4 rounded-full shadow-sm hover:shadow-md hover:brightness-105 active:scale-[0.98] transition-all duration-200 mt-2 uppercase tracking-widest font-bold" type="submit">
+                    Log In
+                </button>
+</form>
+<div class="mt-8 pt-8 border-t border-surface-variant text-center">
+<p class="text-on-surface-variant font-body-md">New to our bakery? 
+                    <a class="text-primary font-bold hover:underline cursor-pointer" onclick="toggleForms()">Create an account</a>
+</p>
+</div>
+</div>
+
+<!-- Register View -->
+<div id="registerView" class="hidden opacity-0 transition-opacity duration-300">
+    <div class="text-center mb-8">
+        <h1 class="font-display-lg text-4xl text-primary italic mb-2">Join Us</h1>
+        <p class="text-on-surface-variant font-label-md text-label-md tracking-widest uppercase">Create an Account</p>
+    </div>
+    <form class="space-y-4" id="registerForm">
+        <!-- Name Field -->
+        <div class="space-y-1">
+            <label class="block font-label-md text-sm text-on-surface-variant ml-1" for="reg_name">Full Name</label>
+            <div class="relative group">
+                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant/60 group-focus-within:text-primary transition-colors text-lg">person</span>
+                <input class="w-full pl-11 pr-4 py-2.5 bg-surface-container-low border-none rounded-lg ring-1 ring-on-surface-variant/30 focus:ring-2 focus:ring-primary outline-none transition-all placeholder:text-on-surface-variant/50" id="reg_name" name="name" placeholder="John Doe" type="text" required/>
+            </div>
+        </div>
+        <!-- Email Field -->
+        <div class="space-y-1">
+            <label class="block font-label-md text-sm text-on-surface-variant ml-1" for="reg_email">Email</label>
+            <div class="relative group">
+                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant/60 group-focus-within:text-primary transition-colors text-lg">mail</span>
+                <input class="w-full pl-11 pr-4 py-2.5 bg-surface-container-low border-none rounded-lg ring-1 ring-on-surface-variant/30 focus:ring-2 focus:ring-primary outline-none transition-all placeholder:text-on-surface-variant/50" id="reg_email" name="email" placeholder="john@example.com" type="email" required/>
+            </div>
+        </div>
+        <!-- Mobile Field -->
+        <div class="space-y-1">
+            <label class="block font-label-md text-sm text-on-surface-variant ml-1" for="reg_mobile">Mobile Number <span class="font-normal text-xs">(Optional)</span></label>
+            <div class="relative group">
+                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant/60 group-focus-within:text-primary transition-colors text-lg">phone_iphone</span>
+                <input class="w-full pl-11 pr-4 py-2.5 bg-surface-container-low border-none rounded-lg ring-1 ring-on-surface-variant/30 focus:ring-2 focus:ring-primary outline-none transition-all placeholder:text-on-surface-variant/50" id="reg_mobile" name="mobile" placeholder="+91 9876543210" type="tel"/>
+            </div>
+        </div>
+        <!-- Passwords Fields (Stacked) -->
+        <div class="space-y-4 mt-2">
+            <div class="space-y-1">
+                <label class="block font-label-md text-sm text-on-surface-variant ml-1" for="reg_password">Password</label>
+                <div class="relative group">
+                    <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant/60 group-focus-within:text-primary transition-colors text-lg">lock</span>
+                    <input class="w-full pl-11 pr-4 py-2.5 bg-surface-container-low border-none rounded-lg ring-1 ring-on-surface-variant/30 focus:ring-2 focus:ring-primary outline-none transition-all placeholder:text-on-surface-variant/50" id="reg_password" name="password" placeholder="••••••••" type="password" required/>
+                </div>
+            </div>
+            <div class="space-y-1">
+                <label class="block font-label-md text-sm text-on-surface-variant ml-1" for="reg_password_confirm">Confirm Password</label>
+                <div class="relative group">
+                    <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant/60 group-focus-within:text-primary transition-colors text-lg">lock</span>
+                    <input class="w-full pl-11 pr-4 py-2.5 bg-surface-container-low border-none rounded-lg ring-1 ring-on-surface-variant/30 focus:ring-2 focus:ring-primary outline-none transition-all placeholder:text-on-surface-variant/50" id="reg_password_confirm" name="password_confirm" placeholder="••••••••" type="password" required/>
+                </div>
+            </div>
+        </div>
+        <!-- Submit Button -->
+        <button class="w-full bg-primary-container text-on-primary-container font-label-md text-label-md py-3 rounded-full shadow-sm hover:shadow-md hover:brightness-105 active:scale-[0.98] transition-all duration-200 mt-4 uppercase tracking-widest font-bold" type="submit">
+            Register
+        </button>
+    </form>
+    <div class="mt-6 pt-6 border-t border-surface-variant text-center">
+        <p class="text-on-surface-variant font-body-md">Already have an account? 
+            <a class="text-primary font-bold hover:underline cursor-pointer" onclick="toggleForms()">Log in</a>
+        </p>
+    </div>
+</div>
+</section>
+<!-- Aesthetic Floating Image Background (Desktop only) -->
+<div class="hidden lg:block absolute top-1/2 -translate-y-1/2 right-xl w-[300px] h-[450px] rounded-[100px] overflow-hidden cocoa-shadow rotate-3 border-4 border-white">
+<div class="w-full h-full bg-cover bg-center" data-alt="An exquisite high-end artisanal cake with delicate pink frosting and intricate gold leaf details, sitting on a marble pedestal in a sunlit boutique bakery. The background is a soft blur of warm cream-colored walls and elegant glass display cases. The lighting is ethereal and airy, highlighting the moist texture of the sponge and the metallic sheen of the gold leaf. The overall mood is one of quiet luxury and decadent comfort." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0Yl2M9eMunbApoeFrHpo7nb8EhXO8xNDaDbP6syqwyjcRcdlerYvgEF-FgJIHQETEARUYr3HPv92mMF3YaYB2V9lJsOvxbhAsL1EjFf0RWSwkrOJK8uuTX6xjE-8Pt0B10RkujrCHxUCsae6i2kPaljwp_8zDTsAzvj6rGcDdiSGYIbDkMYJms-fN7XEy3hdaBL32m_q7SxhsZVAMegNOax31P3qqagiW7PedFLvpk3NtkOXjxneitqY2QOajgHzYkYliK2P304Y')"></div>
+</div>
+</main>
+<!-- BottomNavBar Removed -->
+<!-- Micro-interactions Script -->
+<script>
+        function toggleForms() {
+            const loginView = document.getElementById('loginView');
+            const registerView = document.getElementById('registerView');
+            
+            if (loginView.classList.contains('hidden')) {
+                // Show Login
+                registerView.classList.replace('opacity-100', 'opacity-0');
+                setTimeout(() => {
+                    registerView.classList.add('hidden');
+                    loginView.classList.remove('hidden');
+                    // slight delay to allow display block to apply before fading in
+                    setTimeout(() => loginView.classList.replace('opacity-0', 'opacity-100'), 50);
+                }, 300);
+            } else {
+                // Show Register
+                loginView.classList.replace('opacity-100', 'opacity-0');
+                setTimeout(() => {
+                    loginView.classList.add('hidden');
+                    registerView.classList.remove('hidden');
+                    setTimeout(() => registerView.classList.replace('opacity-0', 'opacity-100'), 50);
+                }, 300);
+            }
+        }
+
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const eyeIcon = document.getElementById('eyeIcon');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.innerText = 'visibility_off';
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.innerText = 'visibility';
+            }
+        }
+
+        // Form feedback interaction
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            btn.innerText = 'Verifying...';
+            btn.classList.add('opacity-80');
+            
+            setTimeout(() => {
+                btn.innerText = 'Welcome back!';
+                btn.classList.remove('bg-primary-container', 'text-on-primary-container');
+                btn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.add('bg-primary-container', 'text-on-primary-container');
+                    btn.classList.remove('bg-secondary-container', 'text-on-secondary-container', 'opacity-80');
+                }, 2000);
+            }, 1000);
+        });
+    </script>
+</body></html>
