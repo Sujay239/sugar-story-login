@@ -72,7 +72,8 @@ $active_tab = isset( $_GET['tab'] ) ? sanitize_text_field( $_GET['tab'] ) : 'gen
         } else if ( $active_tab == 'google' ) {
             $google_client_id = get_option('sugar_story_google_client_id', '');
             $google_client_secret = get_option('sugar_story_google_client_secret', '');
-            $redirect_uri = site_url( '?sugar_story_google_auth=callback' );
+            $auth_key = class_exists( 'Sugar_Story_Login' ) ? Sugar_Story_Login::get_google_auth_key() : 'sugar_story_google_auth';
+            $redirect_uri = site_url( '?' . $auth_key . '=callback' );
             ?>
             <table class="form-table">
                 <tr>

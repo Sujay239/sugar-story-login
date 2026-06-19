@@ -23,8 +23,19 @@ $image_4 = get_option('sugar_story_image_4');
 if ( empty( $image_4 ) ) $image_4 = 'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?w=400&q=80';
 
 $google_client_id = get_option('sugar_story_google_client_id', '');
+
+$auth_key = class_exists( 'Sugar_Story_Login' ) ? Sugar_Story_Login::get_google_auth_key() : 'sugar_story_google_auth';
+$google_login_url = site_url( '?' . $auth_key . '=login' );
+if ( isset( $_GET['redirect_to'] ) ) {
+    $google_login_url = add_query_arg( 'redirect_to', urlencode( wp_unslash( $_GET['redirect_to'] ) ), $google_login_url );
+}
 ?>
 <div class="sugar-story-login-wrapper light">
+<?php if ( isset( $_GET['ssl_oauth_error'] ) ) : ?>
+<div style="background: #fee2e2; border: 1px solid #ef4444; color: #991b1b; padding: 12px 16px; margin: 10px 20px; border-radius: 8px; font-family: sans-serif; font-size: 14px;">
+    <strong>Google Login Error:</strong> <?php echo esc_html( wp_unslash( $_GET['ssl_oauth_error'] ) ); ?>
+</div>
+<?php endif; ?>
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -190,7 +201,7 @@ $google_client_id = get_option('sugar_story_google_client_id', '');
         <span class="px-2 bg-surface text-on-surface-variant font-label-md tracking-wider uppercase" style="background-color: <?php echo esc_attr($bg_color); ?>;">Or continue with</span>
     </div>
 </div>
-<a href="<?php echo esc_url( site_url('?sugar_story_google_auth=login') ); ?>" class="w-full flex items-center justify-center gap-3 bg-white text-gray-700 font-label-md text-label-md py-3 rounded-full shadow-sm hover:shadow-md active:scale-[0.98] transition-all duration-200 border border-gray-200 tracking-widest font-bold cursor-pointer" style="text-decoration: none;">
+<a href="<?php echo esc_url( $google_login_url ); ?>" class="w-full flex items-center justify-center gap-3 bg-white text-gray-700 font-label-md text-label-md py-3 rounded-full shadow-sm hover:shadow-md active:scale-[0.98] transition-all duration-200 border border-gray-200 tracking-widest font-bold cursor-pointer" style="text-decoration: none;">
     <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google Logo" class="w-5 h-5" />
     Google
 </a>
@@ -288,7 +299,7 @@ $google_client_id = get_option('sugar_story_google_client_id', '');
             <span class="px-2 bg-surface text-on-surface-variant font-label-md tracking-wider uppercase" style="background-color: <?php echo esc_attr($bg_color); ?>;">Or continue with</span>
         </div>
     </div>
-    <a href="<?php echo esc_url( site_url('?sugar_story_google_auth=login') ); ?>" class="w-full flex items-center justify-center gap-3 bg-white text-gray-700 font-label-md text-label-md py-3 rounded-full shadow-sm hover:shadow-md active:scale-[0.98] transition-all duration-200 border border-gray-200 tracking-widest font-bold cursor-pointer" style="text-decoration: none;">
+    <a href="<?php echo esc_url( $google_login_url ); ?>" class="w-full flex items-center justify-center gap-3 bg-white text-gray-700 font-label-md text-label-md py-3 rounded-full shadow-sm hover:shadow-md active:scale-[0.98] transition-all duration-200 border border-gray-200 tracking-widest font-bold cursor-pointer" style="text-decoration: none;">
         <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google Logo" class="w-5 h-5" />
         Google
     </a>
