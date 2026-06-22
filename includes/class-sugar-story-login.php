@@ -454,6 +454,20 @@ class Sugar_Story_Login {
 				$this->save_customer_name( $user_id, $first_name, $last_name );
 				$user = get_user_by( 'id', $user_id );
 				$this->oauth_debug_log( 'Created new customer ID: ' . $user_id );
+				
+				// Ensure WooCommerce default new account email is sent
+				if ( function_exists( 'WC' ) ) {
+					$mailer = WC()->mailer();
+					$emails = $mailer->get_emails();
+					if ( isset( $emails['WC_Email_Customer_New_Account'] ) ) {
+						$new_customer_data = array(
+							'user_login' => $user->user_login,
+							'user_pass'  => $password,
+							'user_email' => $user->user_email,
+						);
+						$emails['WC_Email_Customer_New_Account']->trigger( $user_id, $new_customer_data, true );
+					}
+				}
 			} else {
 				$existing_first = get_user_meta( $user->ID, 'first_name', true );
 				$existing_last  = get_user_meta( $user->ID, 'last_name', true );
